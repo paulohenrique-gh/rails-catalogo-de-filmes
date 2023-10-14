@@ -31,7 +31,7 @@ class GenresController < ApplicationController
 
     if @genre.update(name: params[:genre][:name])
       flash[:notice] = "Dados atualizados!"
-      return redirect_to genres_path
+      return redirect_to genre_path(@genre.id)
     end
 
     render :edit

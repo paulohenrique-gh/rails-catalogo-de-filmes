@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .new, .home, .edit {
+    margin-top: 15px;
+ }

@@ -1,4 +1,4 @@
-<h2>Gêneros</h2>
+<h2>Gêneros cadastrados</h2>
 
 <% if flash[:notice] %>
   <div>
@@ -14,4 +14,9 @@
   </div>
 <% end %>
 
-<%= link_to 'Cadastrar novo gênero', new_genre_path %>
+<div class="new">
+  <%= link_to 'Cadastrar novo gênero', new_genre_path %>
+</div>
+<div class="home">
+  <%= link_to 'Home', root_path %>
+</div>

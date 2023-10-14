@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_13_231724) do
+ActiveRecord::Schema[7.1].define(version: 2023_10_14_174729) do
   create_table "directors", force: :cascade do |t|
     t.string "nationality"
     t.date "birth_date"
@@ -34,7 +34,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_13_231724) do
     t.integer "release_year"
     t.text "synopsis"
     t.string "origin"
-    t.integer "duration"
+    t.integer "length"
     t.integer "director_id", null: false
     t.integer "genre_id", null: false
     t.datetime "created_at", null: false

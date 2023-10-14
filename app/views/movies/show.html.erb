@@ -1,0 +1,35 @@
+<% if flash[:notice] %>
+  <div>
+    <h3><%= flash[:notice] %></h3>
+  </div>
+<% end %>
+
+<div>
+  <h2><%= @movie.title %></h2>
+</div>
+<div>
+  <strong>Título: </strong><%= @movie.title %>
+</div>
+<div>
+  <strong>Ano de lançamento: </strong><%= @movie.release_year %>
+</div>
+<div>
+  <strong>Sinopse: </strong><%= @movie.synopsis %>
+</div>
+<div>
+  <strong>País de origem: </strong><%= @movie.origin %>
+</div>
+<div>
+  <strong>Duração: </strong><%= @movie.length %> minutos
+</div>
+<div>
+  <strong>Diretor: </strong><%= @movie.director.name %>
+</div>
+<div>
+  <strong>Gênero: </strong><%= @movie.genre.name %>
+</div>
+
+
+<div class="edit">
+  <%= link_to 'Editar', edit_movie_path(@movie.id) %>
+</div>
