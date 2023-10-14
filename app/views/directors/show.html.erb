@@ -1,0 +1,21 @@
+<% if flash[:notice] %>
+  <div>
+    <h3><%= flash[:notice] %></h3>
+  </div>
+<% end %>
+
+<div>
+  <h2><%= @director.name %></h2>
+</div>
+<div>
+  <strong>Nacionalidade: </strong><%= @director.nationality %>
+</div>
+<div>
+  <strong>Data de nascimento: </strong><%= @director.birth_date %>
+</div>
+<div>
+  <strong>Gênero favorito: </strong><%= @director.genre.name %>
+</div>
+<div>
+  <%= link_to 'Editar', edit_director_path(@director.id) %>
+</div>

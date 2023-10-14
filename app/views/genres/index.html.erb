@@ -9,6 +9,7 @@
 <% @genres.each do |genre| %>
   <div>
       <%= genre.name %> | 
+      <%= link_to 'Detalhes', genre_path(genre.id) %> | 
       <%= link_to 'Editar', edit_genre_path(genre.id) %>
   </div>
 <% end %>

@@ -18,18 +18,22 @@ class GenresController < ApplicationController
     render :new
   end
 
+  def show
+    @genre = Genre.find(params[:id])
+  end
+
   def edit
     @genre = Genre.find(params[:id])
   end
 
   def update
-    puts "Params no update #{params}"
     @genre = Genre.find(params[:id])
-    old_name = @genre.name
 
     if @genre.update(name: params[:genre][:name])
-      flash[:notice] = "Gênero #{old_name} alterado para #{@genre.name}"
+      flash[:notice] = "Dados atualizados!"
       return redirect_to genres_path
     end
+
+    render :edit
   end
 end
