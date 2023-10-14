@@ -25,6 +25,7 @@ class DirectorsController < ApplicationController
 
   def show
     @director = Director.find(params[:id])
+    @movies = Movie.where(director: @director)
   end
 
   def edit
