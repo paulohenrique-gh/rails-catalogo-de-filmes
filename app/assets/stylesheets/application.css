@@ -19,5 +19,10 @@
  }
 
  .new, .home, .edit {
-    margin-top: 15px;
+   margin-top: 15px;
+ }
+
+ .movie_link {
+   text-decoration: none;
+   color: inherit;
  }
