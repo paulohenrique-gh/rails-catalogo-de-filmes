@@ -1,24 +1,22 @@
-# README
+# Catálogo de Filmes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby 3.2.1
 
-Things you may want to cover:
+* Rails 7.1.1
 
-* Ruby version
+Criar o banco de dados: ```rails db:migrate```
 
-* System dependencies
+Iniciar o servidor: ```rails server```
 
-* Configuration
+Porta padrão: 3000
 
-* Database creation
+## Funcionalidades
 
-* Database initialization
+- Cadastrar e editar gêneros, diretores e filmes
 
-* How to run the test suite
+- Listar gêneros e diretores com links que levam para página de detalhes do gênero ou diretor
 
-* Services (job queues, cache servers, search engines, etc.)
+- Listar todos os filmes de um gênero na página de detalhes de um gênero
 
-* Deployment instructions
+- Listar todos os filmes de um diretor na página de detalhes de um diretor
 
-* ...
