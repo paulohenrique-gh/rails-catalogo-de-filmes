@@ -1,0 +1,16 @@
+<h2>Gêneros</h2>
+
+<% if flash[:notice] %>
+  <div>
+    <h3><%= flash[:notice] %></h3>
+  </div>
+<% end %>
+
+<% @genres.each do |genre| %>
+  <div>
+      <%= genre.name %> | 
+      <%= link_to 'Editar', edit_genre_path(genre.id) %>
+  </div>
+<% end %>
+
+<%= link_to 'Cadastrar novo gênero', new_genre_path %>

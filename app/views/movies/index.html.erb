@@ -1,0 +1,7 @@
+<h2>Filmes cadastrados</h2>
+
+<% @movies.each do |movie| %>
+  <div>
+      <%= movie.title %> - <%= movie.release_year %>
+  </div>
+<% end %>
