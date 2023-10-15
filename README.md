@@ -20,3 +20,9 @@ Porta padrão: 3000
 
 - Listar todos os filmes de um diretor na página de detalhes de um diretor
 
+- Listar todos os filmes cadastrados, exibindo título e ano de lançamento
+
+- Detalhar filmes cadastrados incluindo diretor e gênero
+
+- Indicar se filme já foi lançado ou não. Deixar informação disponível tanto na listagem quanto na página de detalhes
+
