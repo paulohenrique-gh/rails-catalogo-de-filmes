@@ -26,3 +26,12 @@
    text-decoration: none;
    color: inherit;
  }
+
+ .list_poster {
+  height: 200px;
+ }
+
+ .detail_poster {
+  margin-top: 25px;
+  height: 500px;
+ }

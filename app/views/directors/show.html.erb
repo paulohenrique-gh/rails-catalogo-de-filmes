@@ -11,13 +11,13 @@
   <strong>Nacionalidade: </strong><%= @director.nationality %>
 </div>
 <div>
-  <strong>Data de nascimento: </strong><%= @director.birth_date %>
+  <strong>Data de nascimento: </strong><%= @director.birth_date.strftime('%d/%m/%Y') %>
 </div>
 <div>
   <strong>Gênero favorito: </strong><%= @director.genre.name %>
 </div>
 <div>
-  <strong>Filmes: </strong>
+  <strong>Filmes cadastrados: </strong>
   <% if @movies.empty? %>
     <p>Nenhum filme deste diretor cadastrado</p>
   <% else %>

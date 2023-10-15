@@ -28,6 +28,10 @@
     <%= f.collection_select :genre_id, Genre.all, :id, :name %>
   </div>
   <div>
+    <%= f.label 'Poster' %>
+    <%= f.file_field :poster %>
+  </div>
+  <div>
     <%= f.submit 'Salvar' %>
   </div>
 <% end %>

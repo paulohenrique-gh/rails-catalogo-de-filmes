@@ -29,12 +29,17 @@
   <strong>Gênero: </strong><%= @movie.genre.name %>
 </div>
 <div>
-  <strong>Data de lançamento: </strong><%= @movie.release_date %>
+  <strong>Data de lançamento: </strong><%= @movie.release_date.strftime('%d/%m/%Y') %>
 </div>
 <div>
   <strong>Status: </strong><%= @status %>
 </div>
 
+<% if @movie.poster.attached? %>
+  <div>
+    <%= image_tag @movie.poster, class: 'detail_poster' %>
+  </div>
+<% end %>
 
 <div class="edit">
   <%= link_to 'Editar', edit_movie_path(@movie.id) %>
