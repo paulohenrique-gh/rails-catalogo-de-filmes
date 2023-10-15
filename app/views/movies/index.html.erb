@@ -1,6 +1,17 @@
 <h2>Filmes cadastrados</h2>
 
-<% @movies.each do |movie| %>
+<h3>Lançados</h3>
+<% @released.each do |movie| %>
+  <div>
+      <%= link_to "#{movie.title} - #{movie.release_year}",
+        movie_path(movie.id), class: 'movie_link' %> |
+      <%= link_to 'Detalhes', movie_path(movie.id) %> |
+      <%= link_to 'Editar', edit_movie_path(movie.id) %> 
+  </div>
+<% end %>
+
+<h3>Não lançados</h3>
+<% @not_released.each do |movie| %>
   <div>
       <%= link_to "#{movie.title} - #{movie.release_year}",
         movie_path(movie.id), class: 'movie_link' %> |

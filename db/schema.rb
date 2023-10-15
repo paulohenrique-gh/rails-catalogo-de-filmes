@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_14_174729) do
+ActiveRecord::Schema[7.1].define(version: 2023_10_15_130452) do
   create_table "directors", force: :cascade do |t|
-    t.string "nationality"
-    t.date "birth_date"
+    t.string "nationality", null: false
+    t.date "birth_date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "genre_id", null: false
-    t.string "name"
+    t.string "name", null: false
     t.index ["genre_id"], name: "index_directors_on_genre_id"
     t.index ["name"], name: "index_directors_on_name", unique: true
   end
@@ -25,20 +25,22 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_14_174729) do
   create_table "genres", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
+    t.string "name", null: false
     t.index ["name"], name: "index_genres_on_name", unique: true
   end
 
   create_table "movies", force: :cascade do |t|
-    t.string "title"
-    t.integer "release_year"
-    t.text "synopsis"
-    t.string "origin"
-    t.integer "length"
+    t.string "title", null: false
+    t.integer "release_year", null: false
+    t.text "synopsis", null: false
+    t.string "origin", null: false
+    t.integer "length", null: false
     t.integer "director_id", null: false
     t.integer "genre_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "status", null: false
+    t.date "release_date", null: false
     t.index ["director_id"], name: "index_movies_on_director_id"
     t.index ["genre_id"], name: "index_movies_on_genre_id"
   end
