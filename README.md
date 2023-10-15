@@ -26,3 +26,5 @@ Porta padrão: 3000
 
 - Indicar se filme já foi lançado ou não. Deixar informação disponível tanto na listagem quanto na página de detalhes
 
+- Permitir cadastrar imagem do pôster de cada filme, e exibir a imagem na listagem e no detalhamento do filme
+
