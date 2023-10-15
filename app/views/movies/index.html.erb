@@ -1,6 +1,9 @@
 <h2>Filmes cadastrados</h2>
 
 <h3>Lançados</h3>
+<% if @released.empty? %>
+  <p>Nenhum filme lançado cadastrado</p>
+<% end %>
 <% @released.each do |movie| %>
   <div>
       <% if movie.poster.attached? %>
@@ -17,6 +20,9 @@
 <% end %>
 
 <h3>Não lançados</h3>
+<% if @not_released.empty? %>
+  <p>Nenhum filme não lançado cadastrado</p>
+<% end %>
 <% @not_released.each do |movie| %>
   <div>
       <% if movie.poster.attached? %>
