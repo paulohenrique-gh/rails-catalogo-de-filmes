@@ -1,5 +1,9 @@
 <h2>Diretores cadastrados</h2>
 
+<% if @directors.empty? %>
+  <p>Nenhum diretor cadastrado</p>
+<% end %>
+
 <% @directors.each do |director| %>
   <div>
       <%= director.name %> | 
