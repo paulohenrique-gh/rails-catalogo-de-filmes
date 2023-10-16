@@ -37,4 +37,12 @@ class GenresController < ApplicationController
 
     render :edit
   end
+
+  def destroy
+    genre = Genre.find(params[:id])
+    genre.destroy
+
+    flash[:notice] = 'Gênero excluído com sucesso!'
+    redirect_to genres_path
+  end
 end

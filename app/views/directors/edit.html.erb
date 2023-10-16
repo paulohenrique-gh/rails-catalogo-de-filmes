@@ -1,1 +1,5 @@
-<%= render partial: 'form', locals: { director: @director } %>
+<%= button_to 'Excluir este diretor', director_path(@director.id),
+  method: :delete, data: { turbo_confirm: 'Confirma exclusão?' } %>
+<div class="form">
+  <%= render partial: 'form', locals: { director: @director } %>
+</div>

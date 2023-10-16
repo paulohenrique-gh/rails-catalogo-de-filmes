@@ -16,7 +16,7 @@ class DirectorsController < ApplicationController
     )
 
     if @director.save
-      flash[:notice] = 'Novo diretor cadastrado com sucesso'
+      flash[:notice] = 'Novo diretor cadastrado com sucesso!'
       return redirect_to director_path(@director.id)
     end
 
@@ -46,5 +46,13 @@ class DirectorsController < ApplicationController
     end
 
     render :edit
+  end
+
+  def destroy
+    director = Director.find(params[:id])
+    director.destroy
+
+    flash[:notice] = 'Diretor excluído com sucesso!'
+    redirect_to directors_path
   end
 end

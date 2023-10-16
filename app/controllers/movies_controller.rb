@@ -62,6 +62,15 @@ class MoviesController < ApplicationController
     render :edit
   end
 
+  def destroy
+    puts "Params #{params}"
+    movie = Movie.find(params[:id])
+    movie.destroy
+
+    flash[:notice] = 'Filme excluído com sucesso!'
+    redirect_to movies_path
+  end
+
   private
 
   def check_release_status(release_date)

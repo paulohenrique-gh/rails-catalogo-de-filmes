@@ -1,13 +1,13 @@
 <h2>Gêneros cadastrados</h2>
 
-<% if @genres.empty? %>
-  <p>Nenhum gênero cadastrado</p>
-<% end %>
-
 <% if flash[:notice] %>
   <div>
     <h3><%= flash[:notice] %></h3>
   </div>
+<% end %>
+
+<% if @genres.empty? %>
+  <p>Nenhum gênero cadastrado</p>
 <% end %>
 
 <% @genres.each do |genre| %>

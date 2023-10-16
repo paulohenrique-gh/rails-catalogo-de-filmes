@@ -1,5 +1,11 @@
 <h2>Diretores cadastrados</h2>
 
+<% if flash[:notice] %>
+  <div>
+    <h3><%= flash[:notice] %></h3>
+  </div>
+<% end %>
+
 <% if @directors.empty? %>
   <p>Nenhum diretor cadastrado</p>
 <% end %>

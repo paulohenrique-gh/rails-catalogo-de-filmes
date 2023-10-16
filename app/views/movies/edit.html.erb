@@ -1,1 +1,6 @@
-<%= render partial: 'form', locals: { movie: @movie } %>
+<%= button_to 'Excluir este filme', movie_path(@movie.id),
+  method: :delete, data: { turbo_confirm: 'Confirma exclusão?' } %>
+<div class="form">
+<div>
+  <%= render partial: 'form', locals: { movie: @movie } %>
+</div>

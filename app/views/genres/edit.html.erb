@@ -1,1 +1,5 @@
-<%= render partial: 'form', locals: { genre: @genre } %>
+<%= button_to 'Excluir este gênero', genre_path(@genre.id),
+   method: :delete, data: { turbo_confirm: 'Confirma exclusão?' } %>
+<div class="form">
+  <%= render partial: 'form', locals: { genre: @genre } %>
+</div>
